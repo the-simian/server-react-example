@@ -1,0 +1,31 @@
+{
+  "name": "react-server-rendering-example",
+  "version": "0.0.1",
+  "description": "Quick example of server rendering with React",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~3.4.6",
+    "react": "0.14.x",
+    "react-dom": "^0.14.0"
+  },
+  "devDependencies": {
+    "browserify": "6.3.x",
+    "envify": "3.2.x",
+    "reactify": "0.17.x",
+    "uglifyjs": "2.4.x",
+    "watchify": "2.1.x"
+  },
+  "scripts": {
+    "start": "watchify -o browser-bundle.js -d .",
+    "build": "NODE_ENV=production browserify . | uglifyjs -cm > browser-bundle.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pete Hunt",
+  "license": "Apache 2",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}
