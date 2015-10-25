@@ -20,8 +20,8 @@
     "build": "NODE_ENV=production browserify . | uglifyjs -cm > browser-bundle.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pete Hunt",
-  "license": "Apache 2",
+  "author": "Pete Hunt, Jesse Harlin",
+  "license": "MIT",
   "browserify": {
     "transform": [
       "reactify",
